@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZSZ TikTok Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main class="container">
+        <header class="main-header">
+            <h1>ZSZ TikTok Downloader</h1>
+            <p>Download TikTok videos & audio without watermark.</p>
+        </header>
+
+        <section class="form-box">
+            <input type="text" id="url-input" placeholder="Paste your TikTok link here...">
+            <button id="search-button">Convert</button>
+        </section>
+
+        <div id="loader" class="hidden"><div class="spinner"></div></div>
+        
+        <div id="error-box" class="result-container hidden">
+            <p id="error-text"></p>
+            <a href="#" id="contact-owner-link" target="_blank" rel="noopener noreferrer">Laporkan Error ke Owner</a>
+        </div>
+
+        <section id="result-card" class="result-container hidden">
+            <h2 id="media-title"></h2>
+            <div class="download-buttons">
+                <a href="#" id="video-btn" class="button primary" download>Download Video (MP4)</a>
+                <a href="#" id="mp3-btn" class="button secondary" download>Download Audio (MP3)</a>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#" id="donate-link" target="_blank" rel="noopener noreferrer">Donasi</a>
+            <span>|</span>
+            <a href="#" id="chat-link" target="_blank" rel="noopener noreferrer">Chat Owner</a>
+        </div>
+        <p>Copyright © <span id="copyright-year"></span> Zura OFC. All Rights Reserved.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
