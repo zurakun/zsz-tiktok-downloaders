@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const yourContactLink = "https://wa.me/6283819371450?text=min+web+nya+eror+benerin+lah"; 
+    const yourContactLink = "https://wa.me/6283892857189?text=halo+bang+kenalan+yuk"; 
     const yourDonateLink = "https://trakteer.id/zuraofc"; 
 
     
