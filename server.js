@@ -1,11 +1,9 @@
-// File: server.js (Versi Final dengan Cheerio Scraper)
-
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
 const axios = require('axios');
 const qs = require('qs');
-const cheerio = require('cheerio'); // Impor cheerio yang baru di-install
+const cheerio = require('cheerio');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -14,7 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Fungsi scraper yang di-upgrade menggunakan Cheerio
 async function tikdownloader(tiktokUrl) {
   try {
     const postData = {
@@ -30,28 +27,34 @@ async function tikdownloader(tiktokUrl) {
       }
     });
 
-    // Gunakan Cheerio untuk mem-parsing HTML
     const $ = cheerio.load(response.data);
 
     const title = $('.maintext').text() || 'Untitled';
-    
-    // Cari link menggunakan selector class yang lebih stabil
     const noWatermarkUrl = $('.without_watermark').attr('href');
     const mp3Url = $('.music').attr('href');
+    const thumbnail = $('img').first().attr('src');
 
     if (!noWatermarkUrl && !mp3Url) {
       throw new Error('Gagal mengekstrak link download. Video mungkin bersifat privat atau URL tidak valid.');
     }
 
-    return { title, noWatermarkUrl, mp3Url };
+    return { title, noWatermarkUrl, mp3Url, thumbnail };
   } catch (error) {
-    console.error(error); // Menampilkan detail error di konsol server
+    console.error(error);
     return { error: 'Maaf, terjadi kesalahan saat mencoba mengambil data dari sumber. Silakan coba lagi nanti.' };
   }
 }
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));
+});
+
+app.get('/privacy.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'privacy.html'));
+});
+
+app.get('/terms.html', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'terms.html'));
 });
 
 app.post('/api/scrape', async (req, res) => {
