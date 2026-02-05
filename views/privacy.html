@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - ZSZ TikTok Downloader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .policy-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem 8rem 1rem;
+        }
+        .policy-content h1 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .policy-content h2 {
+            color: var(--text-primary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .policy-content p, .policy-content li {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .policy-content ul {
+            padding-left: 2rem;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="policy-content">
+        <a href="/" class="back-link">← Kembali ke Home</a>
+        
+        <h1>Privacy Policy</h1>
+        <p><strong>Terakhir diperbarui:</strong> <span id="update-date"></span></p>
+
+        <h2>1. Informasi yang Kami Kumpulkan</h2>
+        <p>ZSZ TikTok Downloader tidak mengumpulkan, menyimpan, atau membagikan informasi pribadi pengguna. Kami menghormati privasi Anda dan berkomitmen untuk melindunginya.</p>
+
+        <h2>2. Penggunaan Layanan</h2>
+        <p>Layanan kami memungkinkan Anda untuk:</p>
+        <ul>
+            <li>Mengunduh video TikTok tanpa watermark</li>
+            <li>Mengunduh audio dari video TikTok</li>
+            <li>Menggunakan layanan secara gratis tanpa registrasi</li>
+        </ul>
+
+        <h2>3. Data yang Diproses</h2>
+        <p>Saat Anda menggunakan layanan kami:</p>
+        <ul>
+            <li>URL TikTok yang Anda masukkan diproses secara real-time</li>
+            <li>Kami tidak menyimpan URL, video, atau data pribadi Anda</li>
+            <li>Semua proses dilakukan secara temporary dan otomatis terhapus</li>
+        </ul>
+
+        <h2>4. Cookies dan Teknologi Pelacakan</h2>
+        <p>Kami menggunakan cookies dan teknologi serupa untuk:</p>
+        <ul>
+            <li>Meningkatkan pengalaman pengguna</li>
+            <li>Menganalisis traffic website (melalui Google Analytics)</li>
+            <li>Menampilkan iklan yang relevan (Google AdSense)</li>
+        </ul>
+        <p>Anda dapat mengatur browser Anda untuk menolak cookies, namun beberapa fitur mungkin tidak berfungsi dengan baik.</p>
+
+        <h2>5. Layanan Pihak Ketiga</h2>
+        <p>Website kami menggunakan layanan pihak ketiga:</p>
+        <ul>
+            <li><strong>Google Analytics:</strong> Untuk analisis traffic website</li>
+            <li><strong>Google AdSense:</strong> Untuk menampilkan iklan</li>
+        </ul>
+        <p>Layanan ini mungkin mengumpulkan informasi sesuai dengan kebijakan privasi mereka masing-masing.</p>
+
+        <h2>6. Keamanan Data</h2>
+        <p>Kami mengambil langkah-langkah yang wajar untuk melindungi informasi yang diproses melalui layanan kami. Namun, tidak ada metode transmisi melalui internet yang 100% aman.</p>
+
+        <h2>7. Hak Pengguna</h2>
+        <p>Anda memiliki hak untuk:</p>
+        <ul>
+            <li>Menolak penggunaan cookies</li>
+            <li>Meminta informasi tentang data yang diproses</li>
+            <li>Menghubungi kami jika ada kekhawatiran tentang privasi</li>
+        </ul>
+
+        <h2>8. Perubahan Kebijakan</h2>
+        <p>Kami dapat memperbarui Privacy Policy ini dari waktu ke waktu. Perubahan akan diposting di halaman ini dengan tanggal "Terakhir diperbarui" yang baru.</p>
+
+        <h2>9. Konten Pihak Ketiga</h2>
+        <p>Layanan kami memproses konten dari TikTok. Kami tidak bertanggung jawab atas konten yang diunduh pengguna. Pengguna bertanggung jawab untuk mematuhi hak cipta dan ketentuan layanan TikTok.</p>
+
+        <h2>10. Kontak</h2>
+        <p>Jika Anda memiliki pertanyaan tentang Privacy Policy ini, silakan hubungi kami melalui halaman Contact.</p>
+
+        <a href="/" class="back-link">← Kembali ke Home</a>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="/privacy.html">Privacy Policy</a>
+            <span>|</span>
+            <a href="/terms.html">Terms of Service</a>
+            <span>|</span>
+            <a href="/">Home</a>
+        </div>
+        <p>Copyright © <span id="copyright-year"></span> Fahmi Coenubia. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        document.getElementById('update-date').textContent = new Date().toLocaleDateString('id-ID', { 
+            year: 'numeric', 
+            month: 'long', 
+            day: 'numeric' 
+        });
+    </script>
+</body>
+</html>
